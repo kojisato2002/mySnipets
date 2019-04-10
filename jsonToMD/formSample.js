@@ -6,7 +6,6 @@ var qs = require('querystring');
 var formIndexPage = fs.readFileSync('./formIndex.html', 'utf-8');
 
 var server = http.createServer(function(req, res) {
-  console.log(req.method);
   if(req.method == 'GET') {
     var urlParts = url.parse(req.url, true);
     console.log('---GET Request---');
