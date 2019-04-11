@@ -11,13 +11,11 @@ var server = http.createServer(function(req, res) {
   stream.on('data', function(data) {
     res.write(data);
   });
-
   stream.on('end', function(data) {
     res.end();
   });
 */
-// stream.pipeを使うとイベントハンドラを登録する必要もなく内部的にendも呼び出される
-
+  // stream.pipeを使うとイベントハンドラを登録する必要もなく内部的にendも呼び出される
   stream.pipe(res);
 
 });
