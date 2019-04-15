@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"><title><%=title%></title>
+<head>
+<body>
+  <h1><%=title%></h1>
+  <hr>
+  <form action="/sendForm" method="post">
+    ドメイン名:<input type="text" name="domain">
+    アプリID:<input type="text" name="app_id">
+    ユーザーID:<input type="text" name="user_id">
+    パスワード:<input type="text" name="password">
+    <button type="submit">送信</button>
+  <form>
+</body>
+</html>
