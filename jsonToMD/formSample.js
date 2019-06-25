@@ -1,9 +1,7 @@
 var http = require('http');
-var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
 
-var formIndexPage = fs.readFileSync('./formIndex.html', 'utf-8');
 
 var server = http.createServer(function(req, res) {
   if(req.method == 'GET') {
@@ -21,10 +19,9 @@ var server = http.createServer(function(req, res) {
       console.log('---POST Request---');
       console.log('nameは' + params.name);
       console.log('ageは' + params.age);
+      res.end('end');
     });
   }
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write(formIndexPage);
 });
 
 server.listen(80);
