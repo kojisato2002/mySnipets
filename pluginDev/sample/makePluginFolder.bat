@@ -1,5 +1,6 @@
 mkdir src
 cd src
+echo "manifest.json" > manifest.json
 mkdir image
 mkdir js
 cd js
